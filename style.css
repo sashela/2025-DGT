@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+.hero{
+    height: 110vh;
+    max-width: 100%;
+    
+    background-image: url(Hero\ web1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 3px 3px 5px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    
+}
+
+.nav{
+    
+    background-color: red;
+    color: white;
+    padding: 0px 20px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, -1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    
+}
+
+.EX{
+    height: 100vh;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+   padding-right: 80px;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.nav ul li{
+    display: inline-block;
+    
+
+    
+
+}
+.logo img{
+    height: 8rem;
+    width: auto;
+    padding: 0;
+    
+}
+
+.logo img:hover{
+    translate: 0px -10px;
+    transition: 2s;
+}
+
+.nav a:hover{
+    color: orangered;
+    transition: 0.8s;
+}
