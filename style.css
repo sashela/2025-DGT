@@ -1,133 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-  --color-primary: #0073ff;
-  --color-white: #e9e9e9;
-  --color-black: #000000;
-  --color-black-1: #212b38;
-}
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overscroll-behavior-x: none;
-  overscroll-behavior-y: none;
+  font-family: "Poppins", sans-serif;
 }
-body{
-  font-family: 'Poppins';
- 
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
 }
-.menu_bar{
-  background-color: var(--color-black);
-  height: 80px;
-  width: 100%;
+
+/* Header */
+.header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 5% ;
-  position: relative; /* Add this */
-  z-index: 10;   
- 
+  align-items: center;
+  padding: 20px;
+  background: #fff;
 }
 
-.logo{
-  color: var(--color-white);
-  font-size: 20px;
-  background-color: grey;
+.logo {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  padding: 20px 10px;
-
+  background: #999;
 }
 
-.logo span{
-  color: var(--color-primary);
-}
-
-.menu_bar ul{
-  list-style: none;
+.nav {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
-.menu_bar ul li{
-  padding: 10px 30px;
-  position: relative;
-  translate: 0% 5%;
-  border-radius: 5px;
-  background-color: #2a2929;
-
-}
-.menu_bar ul li a{
+.nav-item {
+  width: 60px;
+  height: 30px;
+  background: #ccc;
   text-decoration: none;
-  color: var(--color-white);
-  font-size: 20px;
-  transition: all 0.3s ease;
+  
+  
 }
-
-.menu_bar ul li a:hover{
-  color: var(--color-primary);
-}
-.dropdown_menu{
-  display: none;
-}
-
-.dropdown_menu{
-
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: var(--color-black);
-  min-width: 180px; /* optional: set a width */
-  z-index: 100;
-  border-radius: 10px;
-
-}
-
-.menu_bar ul li:hover .dropdown_menu {
-  display: block;
-}
-.menu_bar ul li:hover dropdown_menu ul{
-  display: block;
-  margin-top: 10px;
-
-}
-
-.menu_bar ul li:hover dropdown_menu ul li{
-  width: 150px;
-  padding: 10px;
-}
-.fas{
-  float: right;
-  margin-left: 10px;
-
-}
-
-
-.has-submenu {
-  position: relative;
-}
-
-.dropdown_menu-1 {
-  translate: -30% 5%;
-  display: none;
-  position: absolute;
-  top: 100%;      /* appear below the parent */
-  left: 0;        /* align with the left edge */
-  background-color: var(--color-black);
-  min-width: 180px;
-  z-index: 101;
-  border-radius: 10px;
-}
-
-.has-submenu:hover .dropdown_menu-1 {
-  display: block;
-}
-
-.intro{
-  height: 80vh;
-  background-color: #212b38;
-}
-
 
 /* Intro Section */
 .intro {
@@ -136,73 +50,85 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
-  background: #121212;
-  height: 90vh;
-  color: white;
-  z-index: 2;
- 
+  background: #e9e9e9;
+  height: 100vh;
+  
 }
 
 .intro-text {
   
+  font-size: 4rem;  
+
+}
+
+.intro-image {
  
-  width: 50%;
-  background-color: #121212;
-  translate: 0% -10%;
-
-}
-
-
-.intro-text h1{
-  font-size: 3.6rem;
-  font-weight: 420;
-  padding: 20px 0;
-
-}
-
-.intro-text p {
   
-  font-size: 1.9rem;  
-  width: 75%;
-   font-weight: 350;
-   
-    padding: 20px 0;
-
-
+  background: grey;
+  border-radius: 10px;
+    width: 10em;
+    height: 6em;
 }
 
-.learn-more {
+/* Main Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
  
-  font-size: 1rem;
-  background: rgb(255, 0, 0);
-  border-radius: 5px;
-  padding: 15px;
-  width: auto;
-  display: inline-block;
-  border: 3px solid red;
-  color: black;
-  margin-top: 35px;
-  display: none;
-
-    
 }
 
-.learn-more:hover {
-  background: rgba(128, 128, 128, 0);
-  color: white;
-  transition: 0.5s;
-  border: 3px solid white;
+.content-block {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+   width: 80%;
 }
-.spline{
-    top: 10;
-    position: absolute;
-    right: 0;
-   
-    width: 50%;
-    height: 100%;
-    z-index: 1;
 
+
+.side-image {
+  flex: 1;
+  height: 30rem;
+  border-radius: 20px;
+  
+
+  background: #aaa;
 }
-.spline img{
-width: 100%;
+
+.text {
+  flex: 2;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  
+}
+.text h2 {
+  margin-bottom: 20px;
+  text-align: center  ;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #ddd;
+  text-align: center;
+}
+
+
+
+.content-reverse {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: 80%;
+  margin-left: auto;
+  
+}
+
+.content h1{
+  font-size: 5rem;
+  text-align: center;
 }
